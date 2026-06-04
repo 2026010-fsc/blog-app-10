@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投稿</title>
+</head>
+<body>
+    <h1>投稿</h1>
+
+    <form action="/blogs" method="POST">
+    <div class="toukou">
+        <input type="text" id="title" name="title" placeholder="タイトル"required>
+    </div>
+    <br>
+    <div>
+        <textarea id="notes" name="notes" placeholder="本文"></textarea></div>
+    <br>
+    <button type="submit">保存</button>
+    <a href="/blogs">キャンセル</a>
+    </form>
+</body>
+</html>
