@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>All Blogs</title>
 </head>
 <body>
-    <div class="tatle">
+
+    <div class="title">
     <h1>ブログ</h1>
-    <form action="/greet" method="post">
+    <form action="/record" method="post">
     <label for="name">検索:</label>
     <input type="text" id="name" name="name">
     <button type="submit">送信</button>
     </form>
     </div>
+        <nav>
+            <a href="/blogs">ホーム</a>
+            <a href="/Pos" style="margin-left: 15px;">投稿</a>
+        </nav>
+    
+
+    <main class="content">
+        <div th:each="blog : ${blogs}">
+            <a th:href="@{/blogs/{id}(id=${blog.id})}">
+                <h2 th:text="${blog.title}"></h2>
+            </a>
+            <p th:text="${blog.content}"></p>
+        </div>
+    </main>
+
 </body>
 </html>

@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>投稿</title>
 </head>
 <body>
-    <h1>投稿</h1>
 
-    <form action="/blogs" method="POST">
-    <div class="toukou">
-        <input type="text" id="title" name="title" placeholder="タイトル"required>
-    </div>
-    <br>
-    <div>
-        <textarea id="notes" name="notes" placeholder="本文"></textarea></div>
-    <br>
-    <button type="submit">保存</button>
-    <a href="/blogs">キャンセル</a>
+    <div class="title">
+    <h1>ブログ</h1>
+    <form action="/record" method="post">
+    <label for="name">検索:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">送信</button>
     </form>
+    </div>
+        <nav>
+            <a href="/blogs">ホーム</a>
+            <a href="/Pos" style="margin-left: 15px;">投稿</a>
+        </nav>
+
+
+    <main class="content">
+        <div class="form-container">
+            <h1>記事投稿</h1>
+
+            <form action="/blogs" method="post">
+
+                <input type="text" name="title"  placeholder="タイトル" size="50">
+                <br><br>
+                <textarea name="content" rows="10" cols="100" placeholder="本文" ></textarea>
+                <br><br>
+                <button type="submit">投稿</button>
+                <a href="/blogs">キャンセル</a>
+            </form>
+        </div>
+
+    </main>
 </body>
 </html>
