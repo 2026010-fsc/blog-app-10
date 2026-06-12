@@ -8,19 +8,14 @@
 </head>
 <body>
 
-    <div class="title">
-    <h1>ブログ</h1>
-    <form action="/record" method="post">
-    <label for="name">検索:</label>
-    <input type="text" id="name" name="name">
-    <button type="submit">送信</button>
-    </form>
+    <div class="title" th:replace="'blogs'::header">
+        
     </div>
-        <nav>
+    <nav>
             <a href="/blogs">ホーム</a>
             <a href="/Pos" style="margin-left: 15px;">投稿</a>
         </nav>
-
+    
 
     <main class="content">
         <div class="form-container">
